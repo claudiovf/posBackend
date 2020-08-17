@@ -1,0 +1,13 @@
+
+
+
+POST http://localhost:3006/api/items
+Content-Type: application/json
+
+{
+    "name": "Latte",
+    "category": "Drinks",
+    "price": 4
+}
+
+# GET http://localhost:3010/api/items
