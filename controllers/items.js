@@ -26,9 +26,8 @@ itemsRouter.post('/', (req, res, next) => {
     
     item
         .save()
-        .then(returnedItem => returnedItem.toJSON())
-        .then(formatted => {
-            res.json(formatted)
+        .then(returnedItem => {
+            res.json(returnedItem)
         })
         .catch(error => next(error))
 })

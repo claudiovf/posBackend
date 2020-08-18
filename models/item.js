@@ -6,14 +6,17 @@ mongoose.set('useFindAndModify', false)
 const itemSchema = new mongoose.Schema({
     name: {
         type: String,
-        minlength: 3
+        minlength: 3,
+        required: true
     },
     category: {
         type: String,
-        minlength: 3
+        minlength: 3,
+        required: true
     },
     price: {
-        type: String
+        type: Number,
+        required: true
     }
 })
 

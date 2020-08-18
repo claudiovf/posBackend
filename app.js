@@ -7,7 +7,7 @@ const logger = require('./utils/logger')
 const middleware = require('./utils/middleware')
 const mongoose = require('mongoose')
 
-logger.info('Connecting to MongoDB')
+logger.info('Connecting to', config.MONGODB_URI)
 
 mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -18,7 +18,7 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
     })
 
     
-app.use(cors)
+app.use(cors())
 app.use(express.json())
 app.use(express.static('build'))
 
